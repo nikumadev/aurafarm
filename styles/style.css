@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  font-family: "Outfit", "Gilroy", Arial, Helvetica, sans-serif;
+  background-color: #000000;
+  color: #fafafa;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    scrollbar-width: none;
+  }
+}
+header {
+  width: 100%;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 0.75rem 1rem;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  border-bottom: 0.5px solid #1c1c1c;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+header .nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .nav-left a {
+  font-size: 1.5rem;
+  line-height: 140%;
+  color: #fafafa;
+  text-decoration: none;
+}
+header .nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .nav-right button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+header .nav-right button svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  transition: transform 0.3s ease-in;
+}
+header .nav-right button:active svg {
+  transform: scale(0.8);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: none;
+  }
+}
+.menu {
+  width: 100%;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 1rem 1rem;
+  background-color: #000000;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  border-top: 0.5px solid #1c1c1c;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+.menu .home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .home svg {
+  stroke: #fafafa;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+.menu .explore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .explore svg {
+  stroke: #fafafa;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+.menu .create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .create svg {
+  stroke: #fafafa;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+.menu .save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .save svg {
+  stroke: #fafafa;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+.menu .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .profile img {
+  height: 1.5rem;
+  width: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+aside {
+  display: none;
+}
+
+@media screen and (min-width: 930px) {
+  aside {
+    width: 100%;
+    height: 100vh;
+    padding: 3rem 1rem;
+    display: block;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18rem;
+    border-right: 1px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  aside .top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  aside .top a {
+    color: #fafafa;
+    text-decoration: none;
+  }
+  aside .top a h2 {
+    padding: 0rem 0.75rem;
+    font-size: 2rem;
+  }
+  aside .top .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+  aside .top .links button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0.75rem 0.75rem;
+    font-size: 1.1rem;
+    color: #fafafa;
+    font-family: "Outfit", "Gilroy", Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease-in;
+  }
+  aside .top .links button:hover {
+    background-color: #0f0f0f;
+    border-radius: 0.5rem;
+  }
+  aside .top .links button:active {
+    transform: scale(0.95);
+  }
+  aside .top .links button svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    stroke: #fafafa;
+  }
+  aside .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  aside .bottom button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0.75rem 0.75rem;
+    font-size: 1.1rem;
+    color: #fafafa;
+    font-family: "Outfit", "Gilroy", Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease-in;
+  }
+  aside .bottom button:hover {
+    background-color: #0f0f0f;
+    border-radius: 0.5rem;
+  }
+  aside .bottom button:active {
+    transform: scale(0.95);
+  }
+  aside .bottom button svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    stroke: #fafafa;
+  }
+}
+#feed {
+  max-width: 400px;
+  margin: auto;
+}
+
+.card {
+  margin: 1.25rem 0;
+  color: #fafafa;
+}
+.card video {
+  border: 1px solid #1c1c1c;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  margin-top: 4rem;
+}
+.info .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info .left .profile-pic {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.info .left .icon svg {
+  width: 24px;
+  height: 24px;
+  opacity: 0.85;
+}
+.info .left .username {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.info .left .username svg {
+  width: 16px;
+  height: 16px;
+  transform: translateY(1px);
+}
+
+.head {
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 0.75rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head .left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.head .left img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.head .left .meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.head .left .meta .username {
+  font-size: 1rem;
+  font-weight: 600;
+  gap: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.head .left .meta .username svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: #1da1f2;
+  transform: translateY(1px);
+}
+.head .left .meta .music {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+.head .right svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  stroke: #fafafa;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+.head .right svg:hover {
+  transform: scale(1.08);
+}
+
+.details {
+  margin: 0.5rem 0rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.details .leftside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.details .leftside .top {
+  font-size: 1rem;
+}
+.details .leftside .bottom {
+  font-size: 0.875rem;
+}
+.details .rightside {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.details .rightside a {
+  color: #fafafa;
+  text-decoration: none;
+}
+.details .rightside a svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  stroke: #fafafa;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

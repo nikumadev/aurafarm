@@ -1,0 +1,78 @@
+// menu
+@mixin flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin svg {
+  stroke: #fafafa;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.menu {
+  width: 100%;
+  height: min-content;
+  padding: 1rem 1rem;
+  background-color: #000000;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  border-top: 0.5px solid #1c1c1c;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+
+  .home {
+    @include flex-container;
+
+    svg {
+      @include svg;
+    }
+  }
+
+  .explore {
+    @include flex-container;
+
+    svg {
+      @include svg;
+    }
+  }
+
+  .create {
+    @include flex-container;
+
+    svg {
+      @include svg;
+    }
+  }
+
+  .save {
+    @include flex-container;
+
+    svg {
+      @include svg;
+    }
+  }
+
+  .profile {
+    @include flex-container;
+
+    img {
+      height: 1.5rem;
+      width: 1.5rem;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
